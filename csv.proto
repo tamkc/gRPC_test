@@ -1,0 +1,14 @@
+  syntax = "proto3";
+
+  service CSVService {
+    rpc SendCSV (CSVRequest) returns (CSVResponse) {}
+  }
+
+  message CSVRequest {
+    string csv_data = 1;
+  }
+
+  message CSVResponse {
+    repeated string rows = 1;
+  }
+
